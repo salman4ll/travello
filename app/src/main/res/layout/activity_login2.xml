@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login2">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_back"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/back"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="45dp"
+            />
+        <TextView android:id="@+id/travello_"
+            android:textSize="32sp"
+            android:layout_marginLeft="44dp"
+            android:textColor="@color/hei__welcome_to_color"
+            android:layout_marginTop="102dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/travello__string"/>
+        <TextView android:id="@+id/hei__welcome_to"
+            android:textSize="24sp"
+            android:layout_marginLeft="44dp"
+            android:textColor="@color/hei__welcome_to_color"
+            android:layout_marginTop="144dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hei__welcome_to_string"
+            />
+
+        <EditText
+            android:paddingLeft="26dp"
+            android:drawablePadding="20dp"
+            android:layout_width="319dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="343dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/email"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#ffff"
+            android:textAppearance="@style/email"
+            android:layout_centerHorizontal="true"/>
+        <EditText
+            android:paddingRight="26dp"
+            android:paddingLeft="26dp"
+            android:drawablePadding="20dp"
+            android:layout_width="319dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="410dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/password"
+            android:ems="10"
+            android:hint="*****"
+            android:inputType="textPassword"
+            android:textColorHint="#ffff"
+            android:textAppearance="@style/email"
+            android:layout_centerHorizontal="true"
+            android:drawableEnd="@drawable/hide"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="319dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="476dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_button"
+            android:text="Log In"
+            android:textAllCaps="false"
+            />
+        <RelativeLayout
+            android:layout_width="319dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="580dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginLeft="40dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forget Password"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginLeft="179dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/garis"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

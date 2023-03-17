@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Page 1</string>
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="hei__welcome_to_string">Hei, Welcome To</string>
+    <string name="travello__string">Travello!</string>
+    <string name="travello1"><b>Travello!</b></string>
+    <string name="create"><b>Create Account</b></string>
+    <string name="email">salmathallah@gmail.com</string>
+</resources>
