@@ -6,8 +6,34 @@
     <string name="travello1"><b>Travello!</b></string>
     <string name="create"><b>Create Account</b></string>
     <string name="email">salmathallah@gmail.com</string>
-    <string name="lets_start"><b>Let's Start</b></string>
+    <string name="lets_start"><b>Let\'s Start</b></string>
     <string name="vacation"><b>Your Vacation!</b></string>
     <string name="popular"><b>Popular Place</b></string>
+    <string name="labuan"><b>Labuan Bajo</b></string>
+    <string name="recomend"><b>Recomended for You</b></string>
+    <string name="hint_search"><font size="14">Search here...</font></string>
+    <string name="favorite">Favorite</string>
+    <string name="beach">Beach</string>
+    <string name="mountain">Mountain</string>
+    <string name="bromo"><b>Bromo</b></string>
+    <string name="p_beach"><b>Pink Beach</b></string>
+    <string name="jawa_timur">Jawa Timur</string>
+    <string name="jawa_tengah">Jawa Tengah</string>
+    <string name="ntt">Nusa Tenggara Timur</string>
+    <string name="ntt1">Nusa Tenggara Timur, Indonesia</string>
+    <string name="jateng">Jawa Tengah, Indonesia</string>
+    <string name="jatim">Jawa Timur, Indonesia</string>
+    <string name="bali">Bali, Indonesia</string>
+    <string name="rating">80 Reviews</string>
+    <string name="dieng">Dieng</string>
+    <string name="nihiwatu"><b>Nihiwatu Beach</b></string>
+    <string name="mount_bromo"><b>Mount Bromo</b></string>
+    <string name="bromo2"><b>Bromo</b></string>
+    <string name="mount_dieng"><b>Mount Dieng</b></string>
+    <string name="nusa_penida"><b>Nusa Penida Beach</b></string>
+    <string name="nusa_penida2"><b>Nusa Penida</b></string>
+    <string name="desk_nusa">Nusa Penida adalah sebuah pulau yang terletak di tenggara Bali yang pesona keindahannya telah mendunia. Deretan pantai dengan tebing-tebing nan eksotis di pulau ini telah menjadi daya tarik utama bagi wisatawan. Sebut saja, Kelingking Beach, Angel\'s Billabong, Broken Beach, Atuh Beach, Diamond Beach hingga Crystal Bay. Setidaknya butuh beberapa hari untuk menikmati pantai-pantai di pulau yang dipisahkan oleh Selat Badung dari Pulau Bali ini.
+    Nusa Penida adalah sebuah pulau yang terletak di tenggara Bali yang pesona keindahannya telah mendunia. Deretan pantai dengan tebing-tebing nan eksotis di pulau ini telah menjadi daya tarik utama bagi wisatawan. Sebut saja, Kelingking Beach, Angel\'s Billabong, Broken Beach, Atuh Beach, Diamond Beach hingga Crystal Bay. Setidaknya butuh beberapa hari untuk menikmati pantai-pantai di pulau yang dipisahkan oleh Selat Badung dari Pulau Bali ini.</string>
+    <string name="desk_bromo">Gunung Bromo adalah salah satu gunung api yang masih aktif di Indonesia. Gunung yang memiliki ketinggian 2.392 meter di atas permukaan laut ini merupakan destinasi andalan Jawa Timur. Gunung Bromo berdiri gagah dikelilingi kaldera atau lautan pasir seluas 10 kilometer persegi. Salah satu hal yang terkenal dari Gunung Bromo adalah golden sunrise-nya, pasalnya, Gunung Bromo dinobatkan sebagai tempat yang menawarkan pemandangan matahari terbit terbaik di Pulau Jawa.</string>
 
 </resources>

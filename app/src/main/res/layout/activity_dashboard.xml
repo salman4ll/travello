@@ -9,58 +9,149 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView android:id="@+id/hei__welcome_to"
-            android:textSize="20sp"
-            android:layout_marginLeft="40dp"
-            android:textColor="@color/hei__welcome_to_color"
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:id="@+id/judul_dash">
+            <TextView android:id="@+id/hei__welcome_to"
+                android:textSize="20sp"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/hei__welcome_to_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi, Salma"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/lets_start"
+                android:textColor="@color/hei__welcome_to_color"
+                android:textSize="32sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="60dp"
+                android:text="@string/vacation"
+                android:textColor="@color/hei__welcome_to_color"
+                android:textSize="32sp" />
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hei__welcome_to_string"
+            android:id="@+id/input_search"
+            android:layout_alignTop="@+id/judul_dash"
+            android:layout_marginTop="144dp"
+            >
+            <EditText
+                android:paddingLeft="26dp"
+                android:layout_width="268dp"
+                android:layout_height="42dp"
+                android:background="@drawable/custom_button"
+                android:hint="@string/hint_search"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/email"
+                android:layout_marginLeft="40dp"
+                android:elevation="4dp"
+                android:translationZ="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/search"
+                android:layout_marginLeft="315dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="215dp"
+            android:layout_alignTop="@id/judul_dash">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="67dp"
+                android:background="@drawable/gunung"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="168dp"
+                android:background="@drawable/sunset"
             />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="269dp"
+                android:background="@drawable/love"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_alignTop="@id/filter"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/popular">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="@string/popular"
+                android:textColor="@color/hei__welcome_to_color"
+                android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="90dp"
-            android:text="@string/lets_start"
-            android:textColor="@color/hei__welcome_to_color"
-            android:textSize="32sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="130dp"
-            android:text="@string/vacation"
-            android:textColor="@color/hei__welcome_to_color"
-            android:textSize="32sp" />
-        <EditText
-            android:paddingLeft="26dp"
-            android:layout_width="268dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="203dp"
-            android:background="@drawable/custom_button"
-            android:hint="Search here..."
-            android:inputType="textEmailAddress"
-            android:textAppearance="@style/email"
-            android:layout_marginLeft="40dp"
-            android:elevation="4dp"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="158dp"
+                android:layout_height="185dp"
+                android:layout_marginLeft="36dp"
+                android:background="@drawable/labuan"
+                android:elevation="10dp"
+                android:layout_marginTop="34dp"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:background="@drawable/search"
-            android:layout_marginTop="203dp"
-            android:layout_marginLeft="315dp"/>
-        <TextView
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="158dp"
+                android:layout_height="185dp"
+                android:layout_marginLeft="207dp"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/bromo"
+                android:elevation="10dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="300dp"
-            android:text="@string/popular"
-            android:textColor="@color/hei__welcome_to_color"
-            android:textSize="20sp" />
+            android:layout_marginTop="241dp"
+            android:layout_alignTop="@id/popular">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="@string/recomend"
+                android:textColor="@color/hei__welcome_to_color"
+                android:textSize="20sp" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="235dp"
+                android:layout_height="159dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/pink_beach"
+                android:elevation="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="235dp"
+                android:layout_height="159dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginLeft="270dp"
+                android:background="@drawable/dieng"
+                android:elevation="10dp"
+                />
+        </RelativeLayout>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

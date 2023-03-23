@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".deskripsi2"
+            android:exported="false" />
+        <activity
+            android:name=".filter_mountain"
+            android:exported="false" />
+        <activity
+            android:name=".deskripsi"
+            android:exported="false" />
+        <activity
+            android:name=".filter_beach"
+            android:exported="false" />
+        <activity
+            android:name=".favorite"
+            android:exported="false" />
+        <activity
             android:name=".dashboard"
             android:exported="false" />
         <activity
