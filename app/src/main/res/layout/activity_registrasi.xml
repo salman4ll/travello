@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/create"
-                android:textColor="@color/hei__welcome_to_color"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <EditText
@@ -51,7 +51,8 @@
                 android:drawablePadding="10dp"
                 android:hint="First Name"
                 android:inputType="text"
-                android:textColorHint="#ABA6A6" />
+                android:textColorHint="#ABA6A6"
+                android:textColor="@color/black"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +61,8 @@
                 android:drawablePadding="10dp"
                 android:hint="Last Name"
                 android:inputType="text"
-                android:textColorHint="#ABA6A6"/>
+                android:textColorHint="#ABA6A6"
+                android:textColor="@color/black"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,7 +71,8 @@
                 android:drawablePadding="10dp"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
-                android:textColorHint="#ABA6A6"/>
+                android:textColorHint="#ABA6A6"
+                android:textColor="@color/black"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,6 +81,7 @@
                 android:drawablePadding="10dp"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:textColor="@color/black"
                 android:textColorHint="#ABA6A6"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
@@ -96,7 +100,7 @@
                 android:layout_marginTop="340dp"
                 android:layout_marginRight="100dp"
                 android:text="Already have an account"
-                android:textColor="@color/hei__welcome_to_color"
+                android:textColor="@color/black"
                 android:textSize="10sp" />
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"

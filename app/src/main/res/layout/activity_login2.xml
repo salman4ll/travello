@@ -28,14 +28,14 @@
                 android:layout_marginTop="57dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/travello__string"/>
+                android:text="@string/lets"/>
             <TextView android:id="@+id/hei__welcome_to"
                 android:textSize="24sp"
                 android:textColor="@color/hei__welcome_to_color"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hei__welcome_to_string"
+                android:text="@string/sub_text"
                 android:layout_alignTop="@+id/travello_"
                 />
         </RelativeLayout>
@@ -73,8 +73,14 @@
                 android:hint="*****"
                 android:inputType="textPassword"
                 android:textColorHint="#ffff"
-                android:textAppearance="@style/email"
-                android:drawableEnd="@drawable/hide"/>
+                android:textAppearance="@style/email" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="18dp"
+                android:layout_height="13dp"
+                android:background="@drawable/hide"
+                android:elevation="2dp"
+                android:layout_marginLeft="283dp"
+                android:layout_marginTop="85dp"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="319dp"
                 android:layout_height="49dp"
