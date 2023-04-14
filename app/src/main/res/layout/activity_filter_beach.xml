@@ -87,12 +87,12 @@
                 android:text="Filters"
                 style="@style/filter_found"
                 android:layout_marginTop="11dp"
-                android:layout_marginLeft="292dp"/>
+                android:layout_marginLeft="322dp"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="14dp"
                 android:layout_height="10dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginLeft="330dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="360dp"
                 android:background="@drawable/filter"/>
             <RelativeLayout
                 android:id="@+id/nihiwatu"
