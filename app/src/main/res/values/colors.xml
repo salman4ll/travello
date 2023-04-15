@@ -10,7 +10,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-
     <color name="_bg__login_3_color">#F5F5F5</color>
     <color name="hei__welcome_to_color">#000000</color>
+    <color name="error_collor">#FF0000</color>
 </resources>

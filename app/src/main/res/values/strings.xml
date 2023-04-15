@@ -1,4 +1,5 @@
 <resources>
+    <string name="jwt_token_key">jwt</string>
     <string name="app_name">Page 1</string>
     <string name="ek_img_content">ExportKit Image</string>
     <string name="hei__welcome_to_string">Hei, Welcome To</string>

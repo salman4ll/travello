@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login2">
+    tools:context=".Login2">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,17 +38,37 @@
                 android:text="@string/sub_text"
                 android:layout_alignTop="@+id/travello_"
                 />
+
         </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/message_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/judul_log"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="44dp"
+        android:layout_centerHorizontal="true">
+        <TextView android:id="@+id/message_error"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="@color/error_collor"
+            android:layout_centerHorizontal ="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/login_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/judul_log"
-            android:layout_marginTop="298dp"
+            android:layout_marginTop="258dp"
             android:layout_marginLeft="44dp"
             android:layout_centerHorizontal="true">
+
             <EditText
+                android:id="@+id/email"
                 android:paddingLeft="26dp"
                 android:drawablePadding="20dp"
                 android:layout_width="319dp"
@@ -61,6 +81,7 @@
                 android:textColorHint="#ffff"
                 android:textAppearance="@style/email"/>
             <EditText
+                android:id="@+id/password"
                 android:paddingRight="26dp"
                 android:paddingLeft="26dp"
                 android:drawablePadding="20dp"
@@ -82,12 +103,14 @@
                 android:layout_marginLeft="283dp"
                 android:layout_marginTop="85dp"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login_button"
                 android:layout_width="319dp"
                 android:layout_height="49dp"
                 android:layout_marginTop="134dp"
                 android:background="@drawable/custom_button"
                 android:text="Log In"
                 android:textAllCaps="false"
+                android:textColor="@color/black"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -97,6 +120,7 @@
             android:layout_marginTop="361dp"
             android:layout_alignTop="@+id/login_input">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_create"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Create Account"
