@@ -27,4 +27,18 @@ public class ApiClient {
 
         return responseData;
     }
+
+    public static String getUser(String token) throws IOException {
+        Request request = new Request.Builder()
+                .url(API_BASE_URL + "user")
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        Response response = httpClient.newCall(request).execute();
+        String responseData = response.body().string();
+        response.close();
+
+        return responseData;
+    }
 }
