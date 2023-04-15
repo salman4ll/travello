@@ -14,7 +14,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:id="@+id/judul_dash">
-            <TextView android:id="@+id/hei__welcome_to"
+            <TextView
+                android:id="@+id/hei__welcome_to"
                 android:textSize="20sp"
                 android:layout_marginLeft="40dp"
                 android:textColor="@color/black"

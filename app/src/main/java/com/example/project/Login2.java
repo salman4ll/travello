@@ -10,12 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Console;
 import java.io.IOException;
 
 
@@ -67,7 +65,7 @@ public class Login2 extends AppCompatActivity {
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login2.this, registrasi.class);
+                Intent intent = new Intent(Login2.this, Registrasi.class);
                 startActivity(intent);
             }
         });
@@ -106,7 +104,7 @@ public class Login2 extends AppCompatActivity {
 
                 } catch (IOException | JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(Login2.this, "Login Gagal", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Login2.this, "Login Gagal", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registrasi">
+    tools:context=".Registrasi">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,6 +31,21 @@
                 android:textSize="32sp" />
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/message_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:layout_centerHorizontal="true">
+            <TextView android:id="@+id/message_error_create"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:textColor="@color/error_collor"
+                android:layout_centerHorizontal ="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -44,6 +59,7 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/first_name_regist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -54,6 +70,7 @@
                 android:textColorHint="#ABA6A6"
                 android:textColor="@color/black"/>
             <EditText
+                android:id="@+id/last_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
@@ -64,6 +81,7 @@
                 android:textColorHint="#ABA6A6"
                 android:textColor="@color/black"/>
             <EditText
+                android:id="@+id/email_regist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
@@ -74,6 +92,7 @@
                 android:textColorHint="#ABA6A6"
                 android:textColor="@color/black"/>
             <EditText
+                android:id="@+id/password_regist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="200dp"
@@ -84,12 +103,13 @@
                 android:textColor="@color/black"
                 android:textColorHint="#ABA6A6"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tombol_regist"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_marginTop="270dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/custom_input"
-                android:text="Log In"
+                android:text="Create Account"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 />
@@ -103,6 +123,7 @@
                 android:textColor="@color/black"
                 android:textSize="10sp" />
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/move_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="323dp"

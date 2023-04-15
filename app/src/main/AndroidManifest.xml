@@ -31,7 +31,7 @@
             android:name=".dashboard"
             android:exported="false" />
         <activity
-            android:name=".registrasi"
+            android:name=".Registrasi"
             android:exported="false" />
         <activity
             android:name=".Login2"
