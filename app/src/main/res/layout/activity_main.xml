@@ -4,51 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/judul"
-            >
-            <TextView android:id="@+id/hei__welcome_to"
-                android:textSize="24sp"
-                android:textColor="@color/hei__welcome_to_color"
-                android:layout_marginTop="110dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hei__welcome_to_string"
-                android:layout_centerHorizontal="true"
-                />
-            <TextView android:id="@+id/travello_"
-                android:textSize="36sp"
-                android:textColor="@color/hei__welcome_to_color"
-                android:layout_marginTop="146dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/travello__string"
-                android:layout_centerHorizontal="true"
-                />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/judul"
-            >
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/button"
-                android:layout_marginTop="693dp"
-                android:layout_centerHorizontal="true"
-                />
-        </RelativeLayout>
-    </RelativeLayout>
-
-
-
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/hei__welcome_to"
+        android:textSize="24sp"
+        android:textColor="@color/hei__welcome_to_color"
+        android:layout_marginTop="110dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hei__welcome_to_string"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hei__welcome_to"
+        android:id="@+id/travello_"
+        android:textSize="36dp"
+        android:textColor="@color/hei__welcome_to_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/travello__string"
+        android:layout_centerHorizontal="true"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="120dp"
+        android:id="@+id/button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button"
+        android:layout_centerHorizontal="true"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -96,15 +97,71 @@ public class Login2 extends AppCompatActivity {
                         TokenManager tokenManager = new TokenManager(Login2.this);
                         tokenManager.saveToken(token);
 
-                        Intent intent = new Intent(Login2.this, dashboard.class);
-                        startActivity(intent);
-                        finish();
+                        getUser(token);
+
                     }
 
 
                 } catch (IOException | JSONException e) {
                     e.printStackTrace();
 //                    Toast.makeText(Login2.this, "Login Gagal", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }).start();
+    }
+    private void getUser(final String token) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+//                setContentView(R.layout.activity_dashboard);
+                try {
+                    ApiClient apiClient = new ApiClient();
+                    String response = apiClient.getUser(token);
+
+                    JSONObject jsonResponse = new JSONObject(response);
+
+                    String status = jsonResponse.getString("status");
+
+                    if (!status.equals("OK")) {
+                        String errorMessage = jsonResponse.getString("message");
+                        Intent intent = new Intent(Login2.this, Login2.class);
+                        intent.putExtra("message", errorMessage);
+                        startActivity(intent);
+                        finish();
+
+                    }else {
+                        String data = jsonResponse.getString("data");
+                        JSONObject jsonData = new JSONObject(data);
+
+                        UserModels user = new UserModels(
+                                jsonData.getString("id"),
+                                jsonData.getString("name"),
+                                jsonData.getString("email"),
+                                jsonData.getString("role")
+                        );
+
+                        DatabaseHandler db = new DatabaseHandler(Login2.this);
+
+                        int checkUser = db.getUserModelCount();
+                        Intent intent = new Intent(Login2.this, Dashboard.class);
+
+
+                        switch (checkUser){
+                            case 1:
+                                db.deleteUser(user);
+                                db.addRecord(user);
+                                startActivity(intent);
+                                finish();
+                            case 0:
+                                db.addRecord(user);
+                                startActivity(intent);
+                                finish();
+                        }
+                    }
+
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+//                    Toast.makeText(dashboard.this, "Login Gagal", Toast.LENGTH_SHORT).show();
                 }
             }
         }).start();

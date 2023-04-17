@@ -86,14 +86,12 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="330dp"
                     android:layout_height="130dp"
-                    android:background="@drawable/bg_fav"
                     android:layout_centerHorizontal="true"
                     android:elevation="10dp"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="95dp"
                     android:layout_height="96dp"
-                    android:background="@drawable/bromo3"
                     android:layout_marginTop="45dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="14dp"/>
@@ -135,14 +133,12 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="330dp"
                     android:layout_height="130dp"
-                    android:background="@drawable/bg_fav"
                     android:layout_centerHorizontal="true"
                     android:elevation="10dp"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="95dp"
                     android:layout_height="96dp"
-                    android:background="@drawable/pink_beach2"
                     android:layout_marginTop="45dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="14dp"/>
@@ -184,14 +180,12 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="330dp"
                     android:layout_height="130dp"
-                    android:background="@drawable/bg_fav"
                     android:layout_centerHorizontal="true"
                     android:elevation="10dp"
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="95dp"
                     android:layout_height="96dp"
-                    android:background="@drawable/dieng2"
                     android:layout_marginTop="45dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="14dp"/>

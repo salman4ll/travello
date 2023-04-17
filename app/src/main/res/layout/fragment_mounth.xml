@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".filter_beach">
+    tools:context=".MounthFragment">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="@string/beach"></TextView>
+                android:text="@string/mountain"></TextView>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="24.33dp"
@@ -77,7 +77,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="48 beach found"
+                android:text="98 mountains found"
                 style="@style/filter_found"
                 android:layout_marginTop="11dp"
                 android:layout_marginLeft="31dp"/>
@@ -87,12 +87,12 @@
                 android:text="Filters"
                 style="@style/filter_found"
                 android:layout_marginTop="11dp"
-                android:layout_marginLeft="322dp"/>
+                android:layout_marginLeft="292dp"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="14dp"
                 android:layout_height="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="360dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="330dp"
                 android:background="@drawable/filter"/>
             <RelativeLayout
                 android:id="@+id/nihiwatu"
@@ -118,7 +118,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/nihiwatu"
+                    android:text="@string/mount_bromo"
                     style="@style/judul"
                     android:layout_marginLeft="14dp"
                     android:layout_marginTop="145dp"
@@ -126,7 +126,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ntt1"
+                    android:text="@string/jatim"
                     style="@style/lokasi"
                     android:layout_marginLeft="14dp"
                     android:layout_marginTop="170dp"
@@ -167,7 +167,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/nusa_penida"
+                    android:text="@string/mount_dieng"
                     style="@style/judul"
                     android:layout_marginLeft="14dp"
                     android:layout_marginTop="145dp"
@@ -175,7 +175,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/bali"
+                    android:text="@string/jateng"
                     style="@style/lokasi"
                     android:layout_marginLeft="14dp"
                     android:layout_marginTop="170dp"

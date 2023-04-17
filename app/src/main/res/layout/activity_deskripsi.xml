@@ -11,8 +11,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="430dp"
-            android:id="@+id/bg_desk"
-            android:background="@drawable/nusa_penida2">
+            android:id="@+id/bg_desk">
         </RelativeLayout>
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="51dp"

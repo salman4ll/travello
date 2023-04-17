@@ -6,135 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".Registrasi">
 
-    <RelativeLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg_reg">
-        <RelativeLayout
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/button_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/back" />
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_back"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/travello_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/travello1"
+        android:textColor="@color/hei__welcome_to_color"
+        android:textSize="32sp" />
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/travello_"
+        android:layout_marginTop="70dp"
+        android:id="@+id/message_error_create"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/error_collor"
+        android:layout_centerHorizontal ="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:padding="25dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        >
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="44dp"
-            android:layout_marginTop="45dp"
-            android:id="@+id/judul_reg">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button_back"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/back" />
-            <TextView
-                android:id="@+id/travello_"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:text="@string/travello1"
-                android:textColor="@color/hei__welcome_to_color"
-                android:textSize="32sp" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/message_create"
-            android:layout_width="wrap_content"
+            android:text="@string/create"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/first_name_regist"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:drawableStart="@drawable/name"
+            android:drawablePadding="10dp"
+            android:hint="First Name"
+            android:inputType="text"
+            android:textColorHint="#ABA6A6"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:drawableStart="@drawable/name"
+            android:drawablePadding="10dp"
+            android:hint="Last Name"
+            android:inputType="text"
+            android:textColorHint="#ABA6A6"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/email_regist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:drawableStart="@drawable/email2"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#ABA6A6"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/password_regist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:drawableStart="@drawable/password2"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="#ABA6A6"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tombol_regist"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
             android:layout_marginTop="270dp"
-            android:layout_centerHorizontal="true">
-            <TextView android:id="@+id/message_error_create"
-                android:textSize="16sp"
-                android:textStyle="italic"
-                android:textColor="@color/error_collor"
-                android:layout_centerHorizontal ="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="348dp"
-            android:layout_alignTop="@+id/judul_reg">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/create"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/first_name_regist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:drawableStart="@drawable/name"
-                android:drawablePadding="10dp"
-                android:hint="First Name"
-                android:inputType="text"
-                android:textColorHint="#ABA6A6"
-                android:textColor="@color/black"/>
-            <EditText
-                android:id="@+id/last_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:drawableStart="@drawable/name"
-                android:drawablePadding="10dp"
-                android:hint="Last Name"
-                android:inputType="text"
-                android:textColorHint="#ABA6A6"
-                android:textColor="@color/black"/>
-            <EditText
-                android:id="@+id/email_regist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="150dp"
-                android:drawableStart="@drawable/email2"
-                android:drawablePadding="10dp"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColorHint="#ABA6A6"
-                android:textColor="@color/black"/>
-            <EditText
-                android:id="@+id/password_regist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
-                android:drawableStart="@drawable/password2"
-                android:drawablePadding="10dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textColor="@color/black"
-                android:textColorHint="#ABA6A6"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/tombol_regist"
-                android:layout_width="match_parent"
-                android:layout_height="49dp"
-                android:layout_marginTop="270dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/custom_input"
-                android:text="Create Account"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="340dp"
-                android:layout_marginRight="100dp"
-                android:text="Already have an account"
-                android:textColor="@color/black"
-                android:textSize="10sp" />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/move_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="323dp"
-                android:text="Log In"
-                android:textAllCaps="false"
-                android:textSize="10sp"
-                android:background="@null"
-                android:layout_marginLeft="185dp"
-                android:textColor="#2A8371"
-                />
-        </RelativeLayout>
-
+            android:background="@drawable/custom_input"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="340dp"
+            android:layout_marginRight="100dp"
+            android:text="Already have an account"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/move_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="323dp"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:background="@null"
+            android:layout_marginLeft="185dp"
+            android:textColor="#2A8371"
+            />
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

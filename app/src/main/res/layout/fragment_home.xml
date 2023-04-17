@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dashboard"
+    tools:context=".HomeFragment"
     android:background="#f5f5f5">
     <TextView
         app:layout_constraintTop_toTopOf="parent"
@@ -233,62 +233,5 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:translationZ="10dp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/beach_bar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/mount_bar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/mount_button"/>
-        <androidx.appcompat.widget.AppCompatButton
-            app:layout_constraintStart_toEndOf="@+id/mount_bar"
-            app:layout_constraintEnd_toStartOf="@+id/home_bar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/beach_bar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/beach_button"/>
-        <androidx.appcompat.widget.AppCompatButton
-            app:layout_constraintStart_toEndOf="@+id/beach_bar"
-            app:layout_constraintEnd_toStartOf="@+id/hotels_bar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/home_bar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/home_button_ok"/>
-        <androidx.appcompat.widget.AppCompatButton
-            app:layout_constraintStart_toEndOf="@+id/home_bar"
-            app:layout_constraintEnd_toStartOf="@+id/fav_bar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/hotels_bar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/hotel_button"/>
-        <androidx.appcompat.widget.AppCompatButton
-            app:layout_constraintStart_toEndOf="@+id/hotels_bar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/fav_bar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/profile_button"/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
