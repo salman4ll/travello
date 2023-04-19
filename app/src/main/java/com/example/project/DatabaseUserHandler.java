@@ -1,13 +1,12 @@
 package com.example.project;
 
-import android.app.Service;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 
-public class DatabaseHandler extends SQLiteOpenHelper {
+public class DatabaseUserHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "travello";
     private static final String TABLE_USER = "tbl_users";
@@ -17,7 +16,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_EMAIL = "email";
     private static final String KEY_ROLE = "role";
 
-    public DatabaseHandler(Context context) {
+    public DatabaseUserHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -79,7 +78,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_EMAIL, user.getEmail());
         values.put(KEY_ROLE, user.getRole());
 
-        return db.update(TABLE_USER, values, KEY_ID + " ?", new String[] {user.getId() });
+        return db.update(TABLE_USER, values, KEY_ID + " =?", new String[] {user.getId() });
     }
 
     public void deleteUser(UserModels user) {

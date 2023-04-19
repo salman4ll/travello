@@ -3,10 +3,16 @@ package com.example.project;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +20,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class MounthFragment extends Fragment {
+
+    RecyclerView recyclerView;
+    RecyclerView.Adapter recyclerViewAdapter;
+    RecyclerView.LayoutManager recycleViewLayoutManager;
+    ArrayList<DestinationModels> data;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +70,33 @@ public class MounthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mounth, container, false);
+
+
+        View view = inflater.inflate(R.layout.fragment_mounth, container, false);
+        recyclerView = view.findViewById(R.id.recyc);
+        recyclerView.setHasFixedSize(true);
+
+        recycleViewLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(recycleViewLayoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+
+        data = new ArrayList<>();
+
+
+        DatabaseDestinationHandler db = new DatabaseDestinationHandler(getContext());
+
+        List<DestinationModels> listData = db.getByCategoryRecord("mountain");
+
+
+        for (int i = 0 ; i < listData.size() ; i ++ ) {
+            data.add(listData.get(i));
+            System.out.println("INDEX : "+i);
+        }
+
+
+        recyclerViewAdapter = new AdapterRecycleView(data);
+        recyclerView.setAdapter(recyclerViewAdapter);
+
+        return view;
     }
 }

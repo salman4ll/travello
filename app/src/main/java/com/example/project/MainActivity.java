@@ -7,11 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonStart;
@@ -23,13 +18,16 @@ public class MainActivity extends AppCompatActivity {
         TokenManager tokenManager = new TokenManager(this);
         String token = tokenManager.getToken();
 
+
        buttonStart = findViewById(R.id.button);
 
        buttonStart.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
 
-               DatabaseHandler db = new DatabaseHandler(MainActivity.this);
+               new MyDestination(MainActivity.this);
+
+               DatabaseUserHandler db = new DatabaseUserHandler(MainActivity.this);
 
                int checkUser = db.getUserModelCount();
                switch (checkUser){

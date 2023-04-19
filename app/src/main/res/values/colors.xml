@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#008577</color>
+    <color name="collorMainTest">#2A8371</color>
+    <color name="menu_collor">#71B4AA</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="_bg__login_3_color">#F5F5F5</color>

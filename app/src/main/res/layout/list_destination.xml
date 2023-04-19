@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/custom_button"
+    >
+
+    <ImageView
+        android:id="@+id/image_destinasi"
+        android:background="@mipmap/ic_launcher_round"
+        android:layout_width="329dp"
+        android:layout_height="139dp"/>
+    <TextView
+        android:id="@+id/judul_destinasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination"
+        style="@style/judul"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="145dp"
+        android:elevation="2dp"/>
+    <TextView
+        android:id="@+id/lokasi_destionasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        style="@style/lokasi"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="170dp"
+        android:elevation="2dp"/>
+
+
+</RelativeLayout>

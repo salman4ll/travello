@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -128,6 +127,7 @@ public class Login2 extends AppCompatActivity {
                         intent.putExtra("message", errorMessage);
                         startActivity(intent);
                         finish();
+                        return;
 
                     }else {
                         String data = jsonResponse.getString("data");
@@ -140,7 +140,7 @@ public class Login2 extends AppCompatActivity {
                                 jsonData.getString("role")
                         );
 
-                        DatabaseHandler db = new DatabaseHandler(Login2.this);
+                        DatabaseUserHandler db = new DatabaseUserHandler(Login2.this);
 
                         int checkUser = db.getUserModelCount();
                         Intent intent = new Intent(Login2.this, Dashboard.class);
@@ -152,10 +152,12 @@ public class Login2 extends AppCompatActivity {
                                 db.addRecord(user);
                                 startActivity(intent);
                                 finish();
+                                break;
                             case 0:
                                 db.addRecord(user);
                                 startActivity(intent);
                                 finish();
+                                break;
                         }
                     }
 
