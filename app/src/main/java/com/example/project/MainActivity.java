@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
            @Override
            public void onClick(View view) {
 
-               new MyDestination(MainActivity.this);
 
                DatabaseUserHandler db = new DatabaseUserHandler(MainActivity.this);
 

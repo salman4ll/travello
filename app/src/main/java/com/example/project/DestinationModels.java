@@ -7,16 +7,20 @@ public class DestinationModels {
     private String location;
     private String category;
     private String image;
+    private float rating;
 
     public DestinationModels(){}
-    public DestinationModels(String id, String name, String description, String location, String category, String image) {
+    public DestinationModels(String id, String name, String description, String location, String category, String image, float rating) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.location = location;
         this.category = category;
         this.image = image;
+        this.rating = rating;
     }
+    public float getRating(){return this.rating;}
+    public void setRating(float rating){this.rating = rating;}
     public String getImage() {
         return image;
     }

@@ -21,6 +21,7 @@ public class DatabaseDestinationHandler extends SQLiteOpenHelper {
     private static final String KEY_LOCATION = "location";
     private static final String KEY_CATEGORY = "category";
     private static final String KEY_IMAGE = "image";
+    private static final String KEY_RATING = "rating";
 
 
     public DatabaseDestinationHandler(Context context) {
@@ -29,7 +30,7 @@ public class DatabaseDestinationHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_USERS_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID + " TEXT PRIMARY KEY," + KEY_NAME + " TEXT, " + KEY_DESCRIPTION + " TEXT," + KEY_LOCATION + " TEXT," + KEY_CATEGORY + " TEXT,"+ KEY_IMAGE + " TEXT"+ ")";
+        String CREATE_USERS_TABLE = "CREATE TABLE " + TABLE_USER + "(" + KEY_ID + " TEXT PRIMARY KEY," + KEY_NAME + " TEXT, " + KEY_DESCRIPTION + " TEXT," + KEY_LOCATION + " TEXT," + KEY_CATEGORY + " TEXT,"+ KEY_IMAGE + " TEXT,"+KEY_RATING+" REAL"+ ")";
         db.execSQL(CREATE_USERS_TABLE);
     }
 
@@ -49,6 +50,7 @@ public class DatabaseDestinationHandler extends SQLiteOpenHelper {
         values.put(KEY_LOCATION, destinationModels.getLocation());
         values.put(KEY_CATEGORY, destinationModels.getCategory());
         values.put(KEY_IMAGE, destinationModels.getImage());
+        values.put(KEY_RATING, destinationModels.getRating());
 
         db.insert(TABLE_USER, null, values);
         db.close();
@@ -59,7 +61,7 @@ public class DatabaseDestinationHandler extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_USER, new String[]{KEY_ID, KEY_NAME, KEY_DESCRIPTION, KEY_LOCATION, KEY_CATEGORY, KEY_IMAGE}, KEY_ID + "=?", new String[] { id }, null, null, null, null);
         if (cursor.moveToFirst()) {
             do {
-                DestinationModels destination = new DestinationModels(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3),cursor.getString(4),cursor.getString(5));
+                DestinationModels destination = new DestinationModels(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getFloat(6));
                 return destination;
             }while (cursor.moveToNext());
         }
@@ -82,6 +84,7 @@ public class DatabaseDestinationHandler extends SQLiteOpenHelper {
             destinationModels.setLocation(cursor.getString(3));
             destinationModels.setCategory(cursor.getString(4));
             destinationModels.setImage(cursor.getString(5));
+            destinationModels.setRating(cursor.getFloat(6));
             recordList.add(destinationModels);
         }
         cursor.close();
@@ -107,6 +110,7 @@ public class DatabaseDestinationHandler extends SQLiteOpenHelper {
             destinationModels.setLocation(cursor.getString(3));
             destinationModels.setCategory(cursor.getString(4));
             destinationModels.setImage(cursor.getString(5));
+            destinationModels.setRating(cursor.getFloat(6));
             recordList.add(destinationModels);
         }
         cursor.close();
@@ -136,6 +140,7 @@ public class DatabaseDestinationHandler extends SQLiteOpenHelper {
         values.put(KEY_LOCATION, destinationModels.getLocation());
         values.put(KEY_CATEGORY, destinationModels.getCategory());
         values.put(KEY_IMAGE, destinationModels.getImage());
+        values.put(KEY_RATING, destinationModels.getRating());
 
         return db.update(TABLE_USER, values, KEY_ID + "=?", new String[] {destinationModels.getId() });
     }

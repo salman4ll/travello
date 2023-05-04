@@ -85,7 +85,6 @@ public class BeachFragment extends Fragment {
 
         data = new ArrayList<>();
 
-
         DatabaseDestinationHandler db = new DatabaseDestinationHandler(getContext());
 
         List<DestinationModels> listData = db.getByCategoryRecord("beach");
@@ -93,11 +92,9 @@ public class BeachFragment extends Fragment {
 
         for (int i = 0 ; i < listData.size() ; i ++ ) {
             data.add(listData.get(i));
-            System.out.println("INDEX : "+i);
         }
 
-
-        recyclerViewAdapter = new AdapterRecycleView(data);
+        recyclerViewAdapter = new AdapterRecycleView(getContext(),data);
         recyclerView.setAdapter(recyclerViewAdapter);
 
         return view;

@@ -19,8 +19,8 @@ import java.io.IOException;
 
 public class Login2 extends AppCompatActivity {
 
-
     private Button loginButton, backButton, createButton;
+
     private EditText emailEditText;
     private EditText passwordEditText;
 

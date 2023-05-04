@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/teal_200">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Ulasan"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+    <RatingBar
+        android:id="@+id/rating_val"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:rating="5"
+        android:progressTint="#FFCC01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/message_ulasan"
+        android:background="@drawable/bg_input"
+        android:gravity="top|left"
+        android:scrollHorizontally="false"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="inputkan beberapa pesan disini untuk ulasan agar orang lain tau tentang destinasi ini"
+        />
+    <Button
+        android:id="@+id/btn_confirm_ulasan"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="kirim"
+        android:textSize="18sp"/>
+
+</LinearLayout>

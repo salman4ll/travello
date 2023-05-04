@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:id="@+id/paretDestination"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -11,9 +12,9 @@
 
     <ImageView
         android:id="@+id/image_destinasi"
-        android:background="@mipmap/ic_launcher_round"
-        android:layout_width="329dp"
-        android:layout_height="139dp"/>
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="320dp"
+        android:layout_height="180dp"/>
     <TextView
         android:id="@+id/judul_destinasi"
         android:layout_width="wrap_content"
@@ -21,7 +22,7 @@
         android:text="Destination"
         style="@style/judul"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="145dp"
+        android:layout_marginTop="185dp"
         android:elevation="2dp"/>
     <TextView
         android:id="@+id/lokasi_destionasi"
@@ -30,8 +31,19 @@
         android:text="Location"
         style="@style/lokasi"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="205dp"
         android:elevation="2dp"/>
+    <RatingBar
+        android:id="@+id/rating_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#FFCC01"
+        style="?android:attr/ratingBarStyleSmall"
+        android:rating="3"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="14dp"/>
+
+
 
 
 </RelativeLayout>

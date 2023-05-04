@@ -107,4 +107,35 @@ public class ApiClient {
 
         return responseData;
     }
+
+    public static String getUlasanbyDestination(String destinationId, String token) throws IOException {
+        Request request = new Request.Builder()
+                .url(API_BASE_URL+"ulasan?destination="+destinationId)
+                .get()
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+        Response response = httpClient.newCall(request).execute();
+        String responseData = response.body().string();
+        response.close();
+
+        return responseData;
+    }
+
+    public static String postUlasan(String token, String destinationId, String message, float rating) throws IOException {
+        MediaType mediaType = MediaType.parse("application/json");
+        String requestBody = String.format("{\"destination_id\":\"%s\",\"message\":\"%s\",\"rating\":%.2f}",destinationId, message, rating);
+        RequestBody body = RequestBody.create(mediaType, requestBody);
+
+        Request request = new Request.Builder()
+                .url(API_BASE_URL + "ulasan")
+                .post(body)
+                .addHeader("Authorization", "Bearer " + token)
+                .build();
+
+        Response response = httpClient.newCall(request).execute();
+        String responseData = response.body().string();
+        response.close();
+
+        return responseData;
+    }
 }

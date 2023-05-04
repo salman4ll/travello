@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -20,10 +21,15 @@ import java.io.IOException;
 public class Dashboard extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        MyDestination myDestination = new MyDestination(this);
+        myDestination.execute();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
@@ -33,7 +39,7 @@ public class Dashboard extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selectedFragment = null;
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.nav_beach:
                         selectedFragment = new BeachFragment();
                         break;
@@ -58,6 +64,12 @@ public class Dashboard extends AppCompatActivity {
         });
 
 
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MyDestination myDestination = new MyDestination(this);
+        myDestination.execute();
     }
 }

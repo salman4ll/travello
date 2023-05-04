@@ -59,6 +59,7 @@
         android:layout_marginLeft="10dp"/>
 
     <ScrollView
+        android:scrollbars="none"
         android:layout_marginTop="200dp"
         android:background="@color/_bg__login_3_color"
         app:layout_constraintBottom_toBottomOf="parent"

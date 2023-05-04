@@ -94,7 +94,7 @@ public class MounthFragment extends Fragment {
         }
 
 
-        recyclerViewAdapter = new AdapterRecycleView(data);
+        recyclerViewAdapter = new AdapterRecycleView(getContext(), data);
         recyclerView.setAdapter(recyclerViewAdapter);
 
         return view;
